@@ -1,10 +1,3 @@
-pipenv install
-pipenv shell
-pip install seaborn
-pip install matplotlib
-pip install streamlit
-pip install pandas
-
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
