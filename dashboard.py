@@ -17,7 +17,12 @@ filtered_data = data[data['yr'] == year]
 # Total bike rentals by weather situation
 def total_bike_rentals_by_weather():
     plt.figure(figsize=(10, 6))
-    sns.barplot(x='weathersit', y='cnt', data=filtered_data, estimator=sum, errorbar=None)
+    
+    # Mapping for weather situation labels
+    weather_labels = {1: 'Cerah', 2: 'Berkabut', 3: 'Salju Ringan', 4: 'Hujan Lebat'}
+    filtered_data['weathersit_label'] = filtered_data['weathersit'].map(weather_labels)
+    
+    sns.barplot(x='weathersit_label', y='cnt', data=filtered_data, estimator=sum, errorbar=None)
     st.title('Total Bike Rentals by Weather Situation')
     st.write('Weather Situation')
     st.write('Memperlihatkan total penyewaan sepeda berdasarkan situasi cuaca') 
@@ -26,7 +31,12 @@ def total_bike_rentals_by_weather():
 # Working day (0 = No, 1 = Yes)
 def total_bike_rentals_by_working_day():
     plt.figure(figsize=(10, 6))
-    sns.barplot(x='workingday', y='cnt', data=filtered_data, estimator=sum, errorbar=None)
+    
+    # Mapping for working day labels
+    working_day_labels = {0: 'Holiday', 1: 'Workingday'}
+    filtered_data['workingday_label'] = filtered_data['workingday'].map(working_day_labels)
+    
+    sns.barplot(x='workingday_label', y='cnt', data=filtered_data, estimator=sum, errorbar=None)
     st.title('Total Bike Rentals by Working Day')
     st.write('Working Day (0 = No, 1 = Yes)')
     st.write('Memperlihatkan total penyewaan sepeda berdasarkan hari kerja')
