@@ -1,13 +1,18 @@
-# Dicoding-Analis-Data
+
+# Dicoding Collection Dashboard ✨
+
+## Setup Environment - Anaconda
+```
+conda create --name main-ds python=3.9
+conda activate main-ds
+pip install -r requirements.txt
+```
 
 ## Setup Environment - Shell/Terminal
 ```
 pipenv install
 pipenv shell
-pip install seaborn
-pip install matplotlib
-pip install streamlit
-pip install pandas
+pip install -r requirements.txt
 ```
 
 ## Run steamlit app
