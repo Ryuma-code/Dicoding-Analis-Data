@@ -40,7 +40,7 @@ def weather_pattern_clustering():
     sns.scatterplot(x='temp', y='hum', hue='cluster_label', data=data, palette='viridis')
     st.title('Weather Pattern Clustering')
     st.write('Temperature')
-    st.write('Humidity')
+    st.write('Memperlihatkan kondisi kelembapan,suhu,kecepatan angin')
     st.pyplot()
 
 if __name__ == "__main__":
