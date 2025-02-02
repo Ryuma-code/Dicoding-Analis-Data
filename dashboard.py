@@ -1,9 +1,7 @@
-pip install pandas, streamlit, matplotlib, matplotlib
-
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
-import C as sns
+import seaborn as sns
 
 data = pd.read_csv('all_data.csv')
 
