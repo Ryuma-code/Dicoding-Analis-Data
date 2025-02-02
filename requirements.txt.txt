@@ -1,4 +1,6 @@
-Library pandas,numpy untuk mengolah data.
-Library matplotlib,seaborn untuk visualisasi data.
-Library stremlit untuk mendokumentasikan hasil dengan web sederhana.  
-Library geopandas dan shapely untuk cluter.
+streamlit
+seaborn
+matplotlib
+pandas
+numpy
+geopandas
